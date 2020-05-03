@@ -33,6 +33,7 @@ import (
 
 type Point struct {
 	X, Y float64
+	ID int
 }
 
 // Equals returns true if both p1 and p2 describe exactly the same point.
@@ -44,6 +45,10 @@ func (p1 Point) Equals(p2 Point) bool {
 func (p1 Point) equalWithin(p2 Point, tol float64) bool {
 	return floats.EqualWithinAbsOrRel(p1.X, p2.X, tol, tol) &&
 		floats.EqualWithinAbsOrRel(p1.Y, p2.Y, tol, tol)
+}
+
+func (p1 Point) EqualWithin(p2 Point, tol float64) bool {
+	return p1.equalWithin(p2, tol)
 }
 
 // isBefore() returns true if this point is considered "left" of the

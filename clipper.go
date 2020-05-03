@@ -309,11 +309,11 @@ func (c *clipper) compute(operation Op) Polygon {
 func findIntersection(seg0, seg1 segment, tryBothDirections bool) (int, Point, Point) {
 	var pi0, pi1 Point
 	p0 := seg0.start
-	d0 := Point{seg0.end.X - p0.X, seg0.end.Y - p0.Y}
+	d0 := Point{seg0.end.X - p0.X, seg0.end.Y - p0.Y, 0}
 	p1 := seg1.start
-	d1 := Point{seg1.end.X - p1.X, seg1.end.Y - p1.Y}
+	d1 := Point{seg1.end.X - p1.X, seg1.end.Y - p1.Y, 0}
 	sqrEpsilon := 1e-21 // was originally 1e-3, which is very prone to false positives
-	E := Point{p1.X - p0.X, p1.Y - p0.Y}
+	E := Point{p1.X - p0.X, p1.Y - p0.Y, 0}
 	kross := d0.X*d1.Y - d0.Y*d1.X
 	sqrKross := kross * kross
 	sqrLen0 := d0.Length()
