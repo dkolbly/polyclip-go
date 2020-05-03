@@ -20,8 +20,8 @@
 package test
 
 import (
-	"github.com/ctessum/polyclip-go"
-	"github.com/ctessum/polyclip-go/polyutil"
+	"github.com/dkolbly/polyclip-go"
+	"github.com/dkolbly/polyclip-go/polyutil"
 	"image"
 	"image/color"
 	"image/draw"

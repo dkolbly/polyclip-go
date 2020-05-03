@@ -25,7 +25,7 @@ package polyutil
 
 import (
 	"fmt"
-	"github.com/ctessum/polyclip-go"
+	"github.com/dkolbly/polyclip-go"
 	"io"
 )
 

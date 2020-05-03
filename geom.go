@@ -33,7 +33,7 @@ import (
 
 type Point struct {
 	X, Y float64
-	ID int
+	ID   int
 }
 
 // Equals returns true if both p1 and p2 describe exactly the same point.

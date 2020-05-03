@@ -22,7 +22,7 @@ package polyclip_test
 import (
 	"testing"
 
-	polyclip "github.com/ctessum/polyclip-go"
+	polyclip "github.com/dkolbly/polyclip-go"
 )
 
 type testCaseSimplify struct {
